@@ -23,7 +23,9 @@ class ResultFragment : Fragment() {
 
         arguments?.let {
             val score = ResultFragmentArgs.fromBundle(requireArguments()).score
-            txtscore.text = "Your score is $score"
+
+            val name = ResultFragmentArgs.fromBundle(requireArguments()).name
+            txtscore.text = "$name's score is $score"
         }
 
         btnBack.setOnClickListener {
